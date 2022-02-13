@@ -4,11 +4,11 @@ devcontainer for JAX
 
 ## Requirements
 
-`jax_devcontainer` supports `CUDA>=11.5`. Update drivers accordingly (by e.g., `udo apt-get -y install cuda-drivers`).
+`jax_devcontainer` supports `CUDA>=11.5`. Update drivers accordingly (by e.g., `sudo apt-get -y install cuda-drivers`).
 
 ## VSCode
 
-* Install the remote extentions
+* Install the [remote extentions](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
 * Create a repository by using this repository as a template
 * Clone the new repository
 * Open the cloned directory using VSCode and select `reopen in container`
