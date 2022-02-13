@@ -22,6 +22,7 @@ RUN wget -q https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.s
     ipykernel \
     && ${CONDADIR}/bin/conda update --all -y \
     && ${CONDADIR}/bin/pip install -U "jax[cuda]" -f https://storage.googleapis.com/jax-releases/jax_releases.html \
+    && ${CONDADIR}/bin/pip install -U pip \
     && ${CONDADIR}/bin/pip install -U \
     flax \
     jupyter \

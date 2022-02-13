@@ -2,17 +2,18 @@
 
 devcontainer for JAX
 
-## Dockerfile
+## Requirements
 
-`Dockerfile` supports `CUDA>=11.5. Update drivers accordingly (by e.g., `udo apt-get -y install cuda-drivers`).
+`jax_devcontainer` supports `CUDA>=11.5`. Update drivers accordingly (by e.g., `udo apt-get -y install cuda-drivers`).
 
 ## VSCode
 
 * Install the remote extentions
-* Clone this repository in your remote machine
-* Open the cloned directory using VSCode and follow the instruction
-* Run `python -c "import jax;print(jax.numpy.ones(1))"` to confirm if JAX is installed as 
+* Create a repository by using this repository as a template
+* Clone the new repository
+* Open the cloned directory using VSCode and select `reopen in container`
 
 ## Important Information
 
-When `tensorflow-datasets` is used, set `tf.config.experimental.set_visible_devices([], "GPU")` to avoid TF's preallocation.
+* When `tensorflow-datasets` is used, set `tf.config.experimental.set_visible_devices([], "GPU")` to avoid TF's preallocation.
+* `XLA_PYTHON_CLIENT_PREALLOCATE` is set to false to avoid preallocation in the docker file. If you prefer it, comment out the line.
