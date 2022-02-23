@@ -15,5 +15,7 @@ devcontainer for JAX
 
 ## Important Information
 
+* Inside the docker container, you are a root user. Be careful.
+* A generated docker image is large (around 10GB).
 * When `tensorflow-datasets` is used, set `tf.config.experimental.set_visible_devices([], "GPU")` to avoid TF's preallocation.
 * `XLA_PYTHON_CLIENT_PREALLOCATE` is set to false to avoid preallocation in the docker file. If you prefer it, comment out the line.
