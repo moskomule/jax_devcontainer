@@ -37,4 +37,8 @@
 	// "remoteUser": "vscode"
 	"workspaceMount": "source=${localWorkspaceFolder},target=/${localWorkspaceFolderBasename},type=bind,consistency=cached",
 	"workspaceFolder": "/${localWorkspaceFolderBasename}",
+	"containerEnv": {
+		// to avoid downloading multiple times
+		"TFDS_DATA_DIR": "/${localWorkspaceFolderBasename}/.data"
+	}
 }

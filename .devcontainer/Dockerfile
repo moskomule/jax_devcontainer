@@ -37,8 +37,8 @@ RUN wget -q https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.s
     tensorflow \
     tensorflow-datasets\
     glances[gpu] \
-    && ${CONDADIR}/bin/conda clean -afy \
-    && echo "eval \$(starship init zsh)" >> ${HOME}/.zshrc
+    && ${CONDADIR}/bin/conda clean -afy
 
 ENV XLA_PYTHON_CLIENT_PREALLOCATE=false
 ENV PATH=${CONDADIR}/bin:$PATH
+COPY .devcontainer/.zshrc /root/
